@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mockdebate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        input[type="radio"] {
+            display: none;
+        }
+
+        .card {
+            display: none;
+        }
+
+        #card1:checked ~ .carousel .card1,
+        #card2:checked ~ .carousel .card2 {
+            display: flex;
+        }
+
+        body {
+            background-color: #1e3a8a;
+        }
+
+        @media (min-width: 768px) {
+            .carousel {
+                background-image: url('img/bgvs.jpg');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-center: center;
+                gap: 5px;
+                border-radius: 10px;
+                padding: 20px;
+            }
+
+            .card {
+                display: flex !important;
+                max-width: 45%;
+                flex-grow: 1;
+                height: 80%;
+                background-color: rgba(255, 255, 255, 0.9);
+                border: 3px solid #b22222;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            }
+
+            .carousel-navigation {
+                display: none;
+            }
+
+            .versus {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10%;
+            }
+
+            .versus img {
+                max-width: 100%;
+            }
+        }
+
+        /*Styles mobile*/
+        @media (max-width: 767px) {
+            .card {
+                background-color: rgba(255, 255, 255, 0.95);
+                border: 2px solid #b22222; 
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .text-lg {
+                font-size: 1.125rem; 
+            }
+        }
+    </style>
+</head>
+<body class="h-screen w-screen overflow-hidden">
+    <div class="container mx-auto h-full flex items-center justify-center">
+        <!--Cases-->
+        <input type="radio" id="card1" name="carousel" checked />
+        <input type="radio" id="card2" name="carousel" />
+
+        <!--Section Carousel-->
+        <div class="carousel h-full w-full flex flex-col md:flex-row items-stretch justify-center bg-white shadow-xl rounded-lg p-8">
+            <!--Carte Donald Trump-->
+            <div class="card card1 flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-lg h-full w-full md:w-auto">
+                <img src="img/donald.jpg" alt="Donald Trump" class="w-full h-64 object-cover rounded-md mb-6 border-2 border-red-600">
+                <h2 class="text-3xl font-bold mb-4 text-center text-red-700">Donald Trump</h2>
+                <a href="https://fr.wikipedia.org/wiki/Donald_Trump" target="_blank" class="text-lg mb-4 text-center text-gray-700 font-bold">Ancien Président des États-Unis</a>
+
+                <!--Liste3arguments(desktop)-->
+                <ul class="list-inside text-center mb-4 hidden md:block">
+                    <li class="font-bold">- Position forte sur l'immigration</li>
+                    <li class="font-bold">- Politique de réductions d'impôts</li>
+                    <li class="font-bold">- Soutien aux entreprises américaines</li>
+                </ul>
+
+                <!--Liste10arguments(mobile)-->
+                <ul class="list-inside text-center mb-4 md:hidden">
+                    <li class="font-bold">- Position forte sur l'immigration</li>
+                    <li class="font-bold">- Politique de réductions d'impôts</li>
+                    <li class="font-bold">- Soutien aux entreprises américaines</li>
+                    <li class="font-bold">- Renforcement de la sécurité nationale</li>
+                    <li class="font-bold">- Protection des industries locales</li>
+                    <li class="font-bold">- Réduction de la réglementation</li>
+                    <li class="font-bold">- Politique internationale dure</li>
+                    <li class="font-bold">- Soutien aux forces de l'ordre</li>
+                    <li class="font-bold">- Position sur le commerce extérieur</li>
+                    <li class="font-bold">- Développement économique</li>
+                </ul>
+
+                <label for="card2" class="block md:hidden text-white bg-red-600 hover:bg-red-700 font-bold py-2 px-4 rounded cursor-pointer">
+                    Adversaire
+                </label>
+            </div>
+
+            <!--Image Versus-->
+            <div class="versus hidden md:flex">
+                <img src="img/versus.png" alt="Versus">
+            </div>
+
+            <!--Carte Kamala Harris-->
+            <div class="card card2 flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-lg h-full w-full md:w-auto">
+                <img src="img/kamala.webp" alt="Kamala Harris" class="w-full h-64 object-cover rounded-md mb-6 border-2 border-red-600">
+                <h2 class="text-3xl font-bold mb-4 text-center text-red-700">Kamala Harris</h2>
+                <a href="https://fr.wikipedia.org/wiki/Kamala_Harris" target="_blank" class="text-lg mb-4 text-center text-gray-700 font-bold">Vice-présidente des États-Unis</a>
+
+                <!--Liste3arguments(desktop)-->
+                <ul class="list-inside text-center mb-4 hidden md:block">
+                    <li class="font-bold">- Défense des droits civiques</li>
+                    <li class="font-bold">- Engagement pour la réforme de la justice pénale</li>
+                    <li class="font-bold">- Promotion des droits des femmes</li>
+                </ul>
+
+                <!--Liste10arguments(mobile)-->
+                <ul class="list-inside text-center mb-4 md:hidden">
+                    <li class="font-bold">- Défense des droits civiques</li>
+                    <li class="font-bold">- Engagement pour la réforme de la justice pénale</li>
+                    <li class="font-bold">- Promotion des droits des femmes</li>
+                    <li class="font-bold">- Support pour l'éducation accessible</li>
+                    <li class="font-bold">- Initiatives pour la santé publique</li>
+                    <li class="font-bold">- Soutien pour le changement climatique</li>
+                    <li class="font-bold">- Progrès en matière de justice sociale</li>
+                    <li class="font-bold">- Protection des droits de vote</li>
+                    <li class="font-bold">- Investissement dans les infrastructures</li>
+                    <li class="font-bold">- Engagement pour l'égalité salariale</li>
+                </ul>
+
+                <label for="card1" class="block md:hidden text-white bg-red-600 hover:bg-red-700 font-bold py-2 px-4 rounded cursor-pointer">
+                    Adversaire
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

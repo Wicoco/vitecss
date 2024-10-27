@@ -3,9 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CVITE</title>
+    <title>Godzilla</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script type="module" src="/src/main.jsx"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
-  
+<body class="bg-gray-100 lg:flex lg:items-center lg:justify-center min-h-screen">
 
+  <!--Background-->
+  <div class="lg:flex lg:items-center lg:justify-center lg:w-full lg:h-screen lg:bg-cover lg:bg-center" style="background-image: url('img/bggodzilla.jpg');">
+
+    <!--Carte d'identité-->
+    <div class="bg-white shadow-lg lg:rounded-lg overflow-hidden w-full lg:max-w-2xl h-full lg:h-auto transition-all duration-300 transform lg:min-h-0 lg:flex lg:flex-col">
+
+      <!--Bannière-->
+      <div class="relative">
+        <img class="w-full h-40 lg:h-64 object-cover" src="img/bangodzilla.jpeg" alt="Bannière"> <!-- Remplace par l'image de la bannière -->
+
+        <!--Image de profil-->
+        <div class="absolute inset-x-0 top-24 lg:top-32 flex justify-center">
+          <img class="w-40 h-40 rounded-full border-4 border-white lg:w-48 lg:h-48 lg:mt-0 lg:ml-4" src="img/ppgodzilla.webp" alt="Photo de profil">
+        </div>
+      </div>
+
+      <!--Section Profil-->
+      <div class="p-6 lg:flex lg:flex-row items-center justify-between lg:space-x-6 w-full lg:p-8 mt-16 lg:mt-0">
+
+        <!-- Infos-->
+        <div class="lg:w-full text-center lg:text-left">
+          <h2 class="text-3xl font-bold mb-2 text-gray-800">Godzilla</h2>
+          <p class="text-xl text-gray-600 mb-4">Roi des Monstres</p>
+          
+          <!--Informations-->
+          <div class="text-gray-700 space-y-2 lg:text-lg">
+            <p><strong>Date de naissance :</strong> Inconnue (millions d'années)</p>
+            <p><strong>Sexe :</strong> Mâle</p>
+            <p><strong>Lieu :</strong> Île de la Désolation, Océan Pacifique</p>
+            <p><strong>Téléphone :</strong> N/A (je rugis pour communiquer)</p>
+            <p><strong>Email :</strong> godzilla@kaijuworld.com</p>
+          </div>
+
+          <!--Icônes des réseaux-->
+          <div class="flex justify-center space-x-6 mt-6">
+            <a href="https://www.linkedin.com" class="text-gray-500 hover:text-blue-700"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.twitter.com" class="text-gray-500 hover:text-blue-400"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.github.com" class="text-gray-500 hover:text-gray-900"><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+
+ <!--Section CV pour mobile-->
+<div id="cvSection" class="block lg:hidden p-6 bg-gray-50 h-full">
+  <!--Titre-->
+  <h3 class="text-2xl font-semibold mb-4 text-center text-gray-800 border-b-4 border-red-500 pb-2">Mon CV</h3>
+
+  <!--Expériences Pros-->
+  <div class="mb-6 bg-white shadow-lg rounded-lg p-4">
+    <h4 class="text-xl font-bold mb-2 text-center text-gray-800 border-b-2 border-red-300 pb-2">Expériences Professionnelles</h4>
+    
+    <!--Expérience1-->
+    <div class="mb-4">
+      <h5 class="text-lg font-semibold text-gray-700"><i class="fas fa-briefcase mr-2 text-red-500"></i>Conseiller Militaire</h5>
+      <p class="text-sm text-gray-600">Forces de Défense Internationale | 2014 - 2024</p>
+      <p class="text-gray-700 mt-2">
+        Pendant 10 ans, j'ai agi comme conseiller principal pour les opérations militaires mondiales contre les menaces de monstres géants. J'ai élaboré des stratégies défensives et dirigé des interventions pour protéger les grandes villes contre des attaques à grande échelle.
+      </p>
+      <ul class="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+        <li>Supervision des unités de blindés et d'artillerie lourde</li>
+        <li>Déploiement des capacités spéciales, y compris le Souffle Atomique</li>
+        <li>Coordination avec les équipes d'intervention navales pour des batailles maritimes</li>
+      </ul>
+    </div>
+
+    <!--Expérience2-->
+    <div class="mb-4">
+      <h5 class="text-lg font-semibold text-gray-700"><i class="fas fa-handshake mr-2 text-red-500"></i>Ambassadeur de la Paix</h5>
+      <p class="text-sm text-gray-600">Organisation des Nations pour la Protection Mondiale | 2019 - 2024</p>
+      <p class="text-gray-700 mt-2">
+        En tant qu'ambassadeur spécial de la paix pour l'ONU, j'ai négocié des accords de cessez-le-feu avec d'autres monstres géants pour éviter des conflits destructeurs. J'ai agi comme médiateur dans plusieurs zones de guerre et encouragé la coopération entre les nations.
+      </p>
+      <ul class="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+        <li>Négociation avec King Ghidorah et Rodan pour éviter des conflits inter-monstres</li>
+        <li>Promotion de la réhabilitation des zones touchées par les conflits</li>
+        <li>Facilitation de l'évacuation de zones en danger</li>
+      </ul>
+    </div>
+  </div>
+
+  <!--Compétences-->
+  <div class="mb-6 bg-white shadow-lg rounded-lg p-4">
+    <h4 class="text-xl font-bold mb-2 text-center text-gray-800 border-b-2 border-red-300 pb-2">Compétences</h4>
+    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+      <li>Expertise en tactiques de guerre avancées</li>
+      <li>Capacité de destruction massive via Souffle Atomique</li>
+      <li>Immunité contre les attaques nucléaires et biochimiques</li>
+      <li>Capacité à survivre sous l'eau et en environnement extrême</li>
+      <li>Leadership naturel en situation de crise</li>
+      <li>Grande intelligence stratégique et instincts de combat</li>
+    </ul>
+  </div>
+
+  <!--Réalisations-->
+  <div class="mb-6 bg-white shadow-lg rounded-lg p-4">
+    <h4 class="text-xl font-bold mb-2 text-center text-gray-800 border-b-2 border-red-300 pb-2">Réalisations</h4>
+    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+      <li>Réduction des destructions civiles lors des attaques de monstres de 50% entre 2015 et 2024</li>
+      <li>Réussite de 12 missions de défense intercontinentale en coopération avec les Nations Unies</li>
+      <li>Développement de tactiques d'intervention rapides pour des crises urbaines</li>
+      <li>Réconciliation avec Mothra, établissant une alliance durable pour la défense planétaire</li>
+    </ul>
+  </div>
+
+  <!--Formation-->
+  <div class="mb-6 bg-white shadow-lg rounded-lg p-4">
+    <h4 class="text-xl font-bold mb-2 text-center text-gray-800 border-b-2 border-red-300 pb-2">Formation</h4>
+    <p class="text-gray-700 text-center">
+      Formation autodidacte aux tactiques de combat monstres et maîtrise des capacités de destruction massive au cours de plusieurs siècles.
+    </p>
+  </div>
+
+  <!--Langues-->
+  <div class="mb-6 bg-white shadow-lg rounded-lg p-4">
+    <h4 class="text-xl font-bold mb-2 text-center text-gray-800 border-b-2 border-red-300 pb-2">Langues</h4>
+    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+      <li>Rugissements inter-monstres (fluent)</li>
+      <li>Compréhension instinctive des mouvements militaires humains</li>
+      <li>Communication non-verbale avec les forces naturelles</li>
+    </ul>
+  </div>
+</div>
